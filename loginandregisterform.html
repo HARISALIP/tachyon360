@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Christmas Friend</title>
+  <style>
+    body {
+      background-color: #dff7e4;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 50px;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #b30000;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+
+    .friend-name {
+      font-size: 2rem;
+      color: #006400;
+      font-weight: bold;
+    }
+
+    .christmas-tree {
+      font-size: 100px;
+      color: #228B22;
+      margin-top: 50px;
+      animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      color: white;
+      background-color: #ff6347;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #ff4500;
+    }
+  </style>
+</head>
+<body>
+  <h1>Your Christmas friend is...</h1>
+  <div class="friend-name">Santa Claus!</div>
+
+  <div class="christmas-tree">🎄</div>
+
+  <button class="button" onclick="alert('Merry Christmas!')">Say Merry Christmas!</button>
+</body>
+</html>

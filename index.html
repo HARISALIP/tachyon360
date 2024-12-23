@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Santa Generator</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <img src="image/logo.png" alt="Company Logo" class="logo">
+            <div class="header-title">TACHYONE360</div>
+        </div>
+        <div class="christmas-message">
+            Wishing you all a Merry Christmas & a Prosperous New Year!
+        </div>
+    </header>
+    <div class="mascots">
+        <img src="image/mascot1.png" alt="Left Mascot" class="mascot mascot-left">
+        <img src="image/mascot2.png" alt="Right Mascot" class="mascot mascot-right">
+    </div>
+    <div class="container">
+        <h1>Secret Santa Generator</h1>
+        <div class="upload-section">
+            <input type="file" id="fileInput" accept=".txt" class="file-input">
+            <button class="btn upload-btn" onclick="uploadFile()">Upload Names</button>
+        </div>
+        
+        <button class="btn generate-btn" onclick="generateSecretSanta()">Generate Secret Santa</button>
+        
+        <!-- Search Participants Section -->
+        <!-- <div class="form-group search-bar">
+            <div class="search-heading">Search Participants</div>
+            <input type="text" id="searchInput" placeholder="Search participants..." class="text-input" oninput="filterNames()">
+        </div> -->
+
+        <div id="namesList" class="form-group">
+            <h3>Names:</h3>
+        </div>
+        
+        <!-- Search Pairs Section -->
+        <div class="form-group search-pairs">
+            <div class="search-heading">Search Pairs</div>
+            <input type="text" id="searchPairsInput" placeholder="Search pairs..." class="text-input" oninput="filterPairs()">
+        </div>
+
+        <div class="results" id="results">
+            <h3>Secret Santa Pairs:</h3>
+        </div>
+        
+        <button class="btn download-btn" onclick="downloadResults()">Download Pairs</button>
+    </div>
+    <footer>&copy; TACHYONE 360</footer>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

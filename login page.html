@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christmas Login</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff4b5c, #f3a7c0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-size: cover;
+      color: white;
+    }
+
+    .login-container {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 350px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      color: #b30000;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      font-family: 'Georgia', serif;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 12px;
+      margin: 15px 0;
+      border-radius: 10px;
+      border: 2px solid #b30000;
+      font-size: 16px;
+      color: #333;
+      background-color: #f9f9f9;
+      transition: border-color 0.3s;
+    }
+
+    .input-field:focus {
+      border-color: #228B22;
+      outline: none;
+    }
+
+    .login-btn {
+      background-color: #228B22;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background-color: #006400;
+    }
+
+    .forgot-password {
+      color: #ff6347;
+      font-size: 14px;
+      text-decoration: none;
+      margin-top: 20px;
+      display: block;
+    }
+
+    .forgot-password:hover {
+      text-decoration: underline;
+    }
+
+    .snowflakes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .snowflake {
+      position: absolute;
+      top: -10px;
+      color: white;
+      font-size: 2rem;
+      opacity: 0.8;
+      animation: fall 10s linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px);
+      }
+      100% {
+        transform: translateY(100vh);
+      }
+    }
+
+    .snowflake:nth-child(1) {
+      left: 10%;
+      animation-duration: 12s;
+      animation-delay: 0s;
+    }
+
+    .snowflake:nth-child(2) {
+      left: 25%;
+      animation-duration: 14s;
+      animation-delay: 2s;
+    }
+
+    .snowflake:nth-child(3) {
+      left: 50%;
+      animation-duration: 16s;
+      animation-delay: 4s;
+    }
+
+    .snowflake:nth-child(4) {
+      left: 75%;
+      animation-duration: 18s;
+      animation-delay: 6s;
+    }
+
+    .snowflake:nth-child(5) {
+      left: 90%;
+      animation-duration: 20s;
+      animation-delay: 8s;
+    }
+  </style>
+</head>
+<body>
+  <div class="snowflakes">
+    <div class="snowflake">❄️</div>
+    <div class="snowflake">❄️</div>
+    <div class="snowflake">❄️</div>
+    <div class="snowflake">❄️</div>
+    <div class="snowflake">❄️</div>
+  </div>
+
+  <div class="login-container">
+    <h2>Find Your Christmas Friend</h2>
+    <input type="text" class="input-field" placeholder="Username" id="username" />
+    <input type="password" class="input-field" placeholder="Password" id="password" />
+    <button class="login-btn" onclick="login()">Login</button>
+    <a href="#" class="forgot-password">Forgot password?</a>
+  </div>
+
+  <script>
+    function login() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      
+      if (username === "" || password === "") {
+        alert("Please fill in both fields.");
+      } else {
+        alert("Login successful! 🎄");
+      }
+    }
+  </script>
+</body>
+</html>
